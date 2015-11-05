@@ -1,24 +1,21 @@
-import TodoPubSubModule from '../common/pub-sub';
+import Topical from '../common/topical';
 
 const ModuleName = 'ccTodoApplication.ApplicationControllerModule';
-const ModuleDeps = [
-    TodoPubSubModule.name
-];
+const ModuleDeps = [];
 
 var ApplicationControllerModule = angular.module(ModuleName, ModuleDeps);
 
 class ApplicationController {
-    constructor (TodoPubSub) {
+    constructor () {
         this.TodoItem = '';
-        this.TodoPubSub = TodoPubSub;
     }
 
     AddTodo () {
-        this.TodoPubSub.Publish('ccTodoApplication:AddTodo', {value: this.TodoItem});
+        Topical.Publish('ccTodoApplication:AddTodo', {value: this.TodoItem});
         this.TodoItem = '';
     }
 }
-ApplicationController.$inject = ['ccTodoApplication.TodoPubSub'];
+ApplicationController.$inject = [];
 ApplicationControllerModule.controller('ApplicationController', ApplicationController);
 
 export default ApplicationControllerModule;

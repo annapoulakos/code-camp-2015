@@ -19,8 +19,11 @@
                 <input type="text" class="u-full-width" placeholder="Your todo item here..." ng-model="Application.TodoItem" id="todo_item">
                 <input type="submit" class="button-primary" value="Add Todo">
             </form>
+            <cc-todo-form></cc-todo-form>
         </div>
-        <div class="one-half column">Right</div>
+        <div class="one-half column">
+            <cc-todo-list></cc-todo-list>
+        </div>
     </div>
 
     <script src="./index.js"></script>

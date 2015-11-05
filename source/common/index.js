@@ -1,9 +1,7 @@
-import PubSubModule from './pub-sub';
+import Topical from './topical';
 
 const ModuleName = 'ccTodoApplication.Common';
-const ModuleDeps = [
-    PubSubModule.name
-];
+const ModuleDeps = [];
 
 var CommonModule = angular.module(ModuleName, ModuleDeps);
 
