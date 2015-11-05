@@ -1,4 +1,8 @@
+import ApplicationControllerModule from './application';
+
 const ModuleName = 'ccTodoApplication';
-const ModuleDeps = [];
+const ModuleDeps = [
+    ApplicationControllerModule.name
+];
 
 var application = angular.module(ModuleName, ModuleDeps);
