@@ -1,0 +1,12 @@
+<!-- Force/People/Templates/View.html :: People View -->
+<div class="row">
+    <div class="row">
+        <div class="twelve columns">
+            <strong>Please select the person you'd like to view.</strong>
+        </div>
+    </div>
+
+    <div class="row" ng-repeat="person in People.people">
+        <strong><a ng-href="#/People/{{person.pk}}">{{person.fields.name}}</a></strong>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+[
+    {
+        "label": "Films",
+        "target": "#/Films"
+    },
+    {
+        "label": "People",
+        "target": "#/People"
+    },
+    {
+        "label": "Planets",
+        "target": "#/Planets"
+    }
+]

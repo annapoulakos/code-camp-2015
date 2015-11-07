@@ -1,0 +1,47 @@
+<!-- swApplication.Force.Film.film-view.html -->
+<div class="row">
+    <div class="row">
+        <a href="#/Films">Back</a>
+    </div>
+
+    <div class="row">
+        <strong>Episode {{Film.film.fields.episode_id}}: {{Film.film.fields.title}}</strong>
+        <p>{{Film.film.fields.opening_crawl}}</p>
+
+        <table class="u-full-width">
+            <caption>Film Information</caption>
+            <tbody>
+                <tr>
+                    <th>Director</th>
+                    <td>{{Film.film.fields.director}}</td>
+                </tr>
+                <tr>
+                    <th>Producer(s)</th>
+                    <td>{{Film.film.fields.producer}}</td>
+                </tr>
+                <tr>
+                    <th>Release Date</th>
+                    <td>{{Film.film.fields.release_date}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="u-full-width">
+            <caption>Characters</caption>
+            <tbody>
+                <tr ng-repeat="character in Film.characters track by $index">
+                    <td><a ng-href="#/People/{{character.pk}}">{{character.fields.name}}</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="u-full-width">
+            <caption>Planets</caption>
+            <tbody>
+                <tr ng-repeat="planet in Film.planets track by $index">
+                    <td><a ng-href="#/Planets/{{planet.pk}}">{{planet.fields.name}}</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

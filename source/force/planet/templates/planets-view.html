@@ -1,0 +1,7 @@
+<!-- swApplication.Force.Planet.planets-view.html -->
+<div class="row">
+    <div class="row"><strong>Please select the planet you'd like to view.</strong></div>
+    <div class="row" ng-repeat="planet in Planets.planets">
+        <strong><a ng-href="#/Planets/{{planet.pk}}">{{planet.fields.name}}</a></strong>
+    </div>
+</div>

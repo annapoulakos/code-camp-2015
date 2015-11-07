@@ -1,0 +1,12 @@
+<!-- swApplication.Force.People.Templates.person-view :: Person View -->
+<div class="row">
+    <div class="row">
+        <a href="#/People">Back</a>
+    </div>
+    <div class="row">
+        <strong>{{Person.person.fields.name}}</strong><br>
+        Born: {{Person.person.fields.birth_year}}, Gender: {{Person.person.fields.gender}}, Height: {{Person.person.fields.height}}, Weight: {{Person.person.fields.mass}}<br>
+        Hair: {{Person.person.fields.hair_color}}, Eyes: {{Person.person.fields.eye_color}}, Skin: {{Person.person.fields.skin_color}}<br>
+        Homeworld: <a ng-href="#/Planets/{{Person.homeworld.pk}}">{{Person.homeworld.fields.name}}</a>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<!-- swApplication.Force.Film.films-view.html -->
+<div class="row">
+    <div class="row"><strong>Please select the film you'd like to view.</strong></div>
+
+    <div class="row" ng-repeat="film in Films.films">
+        <strong><a ng-href="#/Films/{{film.pk}}">Episode {{film.fields.episode_id}}: {{film.fields.title}}</a></strong>
+    </div>
+</div>
